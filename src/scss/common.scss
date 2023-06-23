@@ -41,6 +41,7 @@
 .block-heading {
   &__subtitle {
     font-size: $h4-heading;
+    line-height: 165%;
     font-family: $yellowtailFamily;
     color: $greenColor;
   }
