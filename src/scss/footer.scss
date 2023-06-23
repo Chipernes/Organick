@@ -1,0 +1,253 @@
+//====================================================================================================
+.footer {
+  &__container {
+
+  }
+
+  // ===== Form =====
+  &__form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &-img {
+      position: absolute;
+      z-index: -1;
+
+      width: 100%;
+      height: 100%;
+
+      border-radius: rem(30);
+      object-fit: cover;
+      object-position: right;
+    }
+
+    @media (max-width: rem(1000)) {
+      &-img {
+        object-position: center;
+      }
+    }
+
+    &-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      width: 100%;
+      padding: rem(105) rem(71);
+
+      @media (max-width: rem(1000)) {
+        & {
+          padding: rem(70) rem(60);
+        }
+      }
+
+      @media (max-width: rem(650)) {
+        & {
+          padding: rem(40) rem(30);
+        }
+      }
+    }
+
+    &-title {
+      flex: 1 1 auto;
+      font-size: $h2-heading;
+      font-family: $robotoFamily;
+      font-weight: 800;
+      color: $whiteColor;
+    }
+
+    &-input {
+      width: rem(350);
+      height: rem(80);
+      margin-right: rem(6);
+
+      border-radius: rem(16);
+
+      &::placeholder {
+        padding: rem(30) rem(25);
+
+        font-family: $robotoFamily;
+        font-style: italic;
+        color: #ABABAB;
+      }
+    }
+
+    &-button {
+
+    }
+
+    @media (max-width: rem(1300)) {
+      &-title {
+        margin-bottom: rem(30);
+      }
+
+      &-title {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: rem(1000)) {
+      &-title {
+        @include adaptiveValue("font-size", 50, 30);
+      }
+
+      &-input {
+        flex: 1 1 auto;
+        width: 100%;
+        margin: rem(6) 0;
+      }
+
+      &-button {
+        flex: 1 1 auto;
+        width: 100%;
+      }
+    }
+  }
+
+  // ===== Main content =====
+  &__content {
+    display: flex;
+    justify-content: center;
+    @include adaptiveValue("margin-top", 120, 50);
+    @include adaptiveValue("margin-bottom", 100, 30);
+
+    & a {
+      transition: 0.3s;
+    }
+
+    & h2 {
+      margin-bottom: rem(32);
+
+      font-size: $h5-heading;
+      font-weight: 700;
+      font-family: $robotoFamily;
+    }
+
+    &-contact {
+      flex: 1 1 25%;
+      text-align: right;
+      padding-right: rem(50);
+      border-right: 1px solid #D4D4D4;
+
+      & div {
+        margin-bottom: rem(36);
+        line-height: calc(29 / 18);
+      }
+
+      & p {
+        font-weight: 700;
+      }
+
+      & a:hover {
+        color: $greenColor;
+      }
+    }
+
+    &-main {
+      flex: 1 1 50%;
+      margin: 0 auto;
+      padding: 0 rem(41);
+
+      text-align: center;
+
+      & .menu__logo {
+
+      }
+
+      & p {
+        margin: rem(23) 0 rem(50) 0;
+      }
+
+      & .footer__icons {
+        display: inline-flex;
+      }
+
+      & a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: rem(60);
+        height: rem(60);
+
+        background-color: $lightGreenColor;
+        border-radius: 50%;
+      }
+
+      & a:not(:last-child) {
+        margin-right: rem(15);
+      }
+
+      & a:hover {
+        background-color: $greenColor;
+      }
+    }
+
+    &-pages {
+      flex: 1 1 25%;
+      text-align: left;
+      padding-left: rem(50);
+      border-left: 1px solid #D4D4D4;
+
+      & a {
+        display: block;
+        line-height: calc(49 / 18);
+      }
+
+      & a:hover {
+        color: $greenColor;
+      }
+    }
+
+    @media (max-width: rem(1200)) {
+      & {
+        flex-wrap: wrap;
+      }
+
+      &-main {
+        flex: 1 1 auto;
+        order: -1;
+        width: 100%;
+        margin-bottom: rem(50);
+      }
+    }
+
+    @media (max-width: rem(650)) {
+      & {
+        flex-wrap: wrap;
+      }
+
+      &-main {
+        padding: 0;
+      }
+
+      &-contact, &-pages {
+        flex: 1 1 auto;
+        width: 100%;
+        padding: 0;
+
+        text-align: center;
+
+        border: none;
+      }
+    }
+  }
+
+  // ===== Copyright =====
+  &__copyright {
+    padding: rem(17) rem(15) rem(20) rem(15);
+
+    @include adaptiveValue("font-size", 18, 14);
+    text-align: center;
+
+    border-top: 1px solid #D4D4D4;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+}
+
+//====================================================================================================
