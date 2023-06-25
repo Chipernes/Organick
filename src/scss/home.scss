@@ -119,7 +119,7 @@
     display: flex;
     justify-content: center;
     gap: rem(36);
-    
+
     @media (max-width: rem(1024)) {
       & {
         flex-wrap: wrap;
@@ -198,7 +198,7 @@
     justify-content: center;
     align-items: center;
     gap: rem(20);
-    
+
     @media (max-width: rem(1200)) {
       & {
         flex-direction: column;
@@ -487,7 +487,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    
+
     @media (max-width: rem(950)) {
       & {
         flex-direction: column;
@@ -504,7 +504,7 @@
 
     &__title {
       color: $whiteColor;
-      
+
       @media (max-width: rem(600)) {
         & {
           font-size: $h3-heading;
@@ -612,7 +612,7 @@
       @media (max-width: rem(731)) {
         margin: 0 auto;
       }
-      
+
       @media (max-width: rem(560)) {
         font-size: $h3-heading;
       }
@@ -653,7 +653,7 @@
     gap: rem(40);
     max-width: rem(1920);
     margin: 0 auto;
-    
+
     @media (max-width: rem(1300)) {
       flex-wrap: wrap;
     }
@@ -735,7 +735,7 @@
     justify-content: space-between;
     align-items: flex-end;
     gap: rem(20);
-    
+
     @media (max-width: rem(1050)) {
       flex-direction: column;
       align-items: center;
@@ -837,7 +837,7 @@
 
     background: $whiteColor;
     border-radius: 50%;
-    
+
     @media (max-width: $tablet) {
       & {
         width: rem(120);
@@ -866,7 +866,7 @@
     background-color: #ffffff;
     border-radius: rem(30);
     box-shadow: 0 rem(20) rem(35) 0 rgba(167, 167, 167, 0.25);
-    
+
     @media (max-width: rem(1300)) {
       position: relative;
       left: 0;
