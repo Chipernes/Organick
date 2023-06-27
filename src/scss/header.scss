@@ -1,5 +1,7 @@
 //====================================================================================================
 .header {
+  position: relative;
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,7 +118,8 @@
 
   &__list {
     display: inline-flex;
-    @include adaptiveValue("gap", 45, 10);
+    flex-wrap: wrap;
+    @include adaptiveValue("column-gap", 45, 10);
 
     @media (max-width: rem(1000)) {
       & {

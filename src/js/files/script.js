@@ -1,17 +1,57 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var burger = document.querySelector('.icon-menu');
-    var menu = document.querySelector('.menu__list');
-    var pagesMenu = document.querySelector('.menu__pages');
-    var pagesLink = document.querySelector('.pages-link');
-    var pagesList = document.querySelector('.menu__pages-list');
+document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.querySelector('.icon-menu');
+    const menu = document.querySelector('.menu__list');
+    const pagesMenu = document.querySelector('.menu__pages');
+    const pagesLink = document.querySelector('.pages-link');
+    const pagesList = document.querySelector('.menu__pages-list');
 
-    burger.addEventListener('click', function(event) {
+    burger.addEventListener('click', (event) => {
         burger.classList.toggle('menu-open');
         menu.classList.toggle('menu-open');
     });
 
-    pagesLink.addEventListener('click', function(event) {
+    pagesLink.addEventListener('click', (event) => {
         pagesList.classList.toggle('pages-open');
         pagesMenu.classList.toggle('pages-open');
     });
 });
+
+
+
+
+/* Slide of testimonial comments */
+/*let slideIndex = 1;
+showSlides(slideIndex);
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("comment");
+    let dots = document.getElementsByClassName("comment__dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}*/
+
+/*function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}*/
+

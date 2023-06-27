@@ -62,15 +62,21 @@
       width: rem(350);
       height: rem(80);
       margin-right: rem(6);
+      padding: 0 rem(30);
 
       border-radius: rem(16);
+      outline: none;
 
       &::placeholder {
-        padding: rem(30) rem(25);
-
         font-family: $robotoFamily;
         font-style: italic;
         color: #ABABAB;
+
+        transition: 0.3s;
+      }
+
+      &:focus::placeholder {
+        transform: translateY(-60px);
       }
     }
 

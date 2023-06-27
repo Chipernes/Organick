@@ -13,6 +13,8 @@
 
   border-radius: rem(16);
 
+  transition: 0.3s;
+
   & a {
     position: relative;
     display: inline-flex;
@@ -26,14 +28,28 @@
   &-first {
     color: $whiteColor;
     background-color: $mainColor;
+
+    &:hover {
+      background-color: $darkGrayColor;
+    }
   }
 
   &-second {
     background-color: $yellowColor;
+
+    &:hover {
+      background-color: $greenColor;
+      color: $whiteColor;
+    }
   }
 
   &-third {
     border: 2px solid $mainColor;
+
+    &:hover {
+      background-color: $darkGrayColor;
+      color: $whiteColor;
+    }
   }
 }
 

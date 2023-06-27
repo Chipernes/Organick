@@ -9,8 +9,6 @@
   &__about-block {
     @include adaptiveValue("padding-top", 210, 50);
     @include adaptiveValue("padding-bottom", 140, 50);
-
-    background-color: #ffffff;
   }
 
   &__choose-block {
@@ -18,6 +16,11 @@
     @include adaptiveValue("padding-bottom", 190, 50);
 
     background-color: $whiteColor;
+  }
+
+  &__team {
+    @include adaptiveValue("padding-top", 177, 50);
+    @include adaptiveValue("padding-bottom", 202, 50);
   }
 }
 
@@ -50,6 +53,7 @@
 
 .page__about {
   .about-block {
+    background-color: #ffffff;
     &__container {
       @media (max-width: rem(1300)) {
         & {
@@ -284,6 +288,91 @@
   &__card-text {
     width: rem(185);
     line-height: 165%;
+  }
+}
+
+.team-block {
+  &__container {
+  }
+
+  .block-heading {
+    text-align: center;
+  }
+
+  .block-heading__subtitle {
+  }
+
+  .block-heading__title {
+  }
+
+  .block-heading__text {
+    max-width: rem(850);
+    margin: 0 auto;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: rem(25);
+
+    margin-top: rem(42);
+  }
+
+  &__team-member {
+  }
+
+  .team-member {
+    max-width: rem(450);
+    border-radius: rem(30);
+    overflow: hidden;
+
+    background-color: $whiteColor;
+    object-fit: cover;
+    object-position: center;
+
+    transition: 0.3s;
+
+    &:hover {
+      transform: translateY(rem(-15));
+      background-color: #ffffff;
+      box-shadow: 0 10px 20px $grayColor;
+    }
+
+    &__photo {
+      width: 100%;
+    }
+
+    &__info {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      margin: rem(35) rem(28);
+    }
+
+    &__full-name {
+      flex: 1 1 auto;
+    }
+
+    &__name {
+      font-size: $h6-heading;
+    }
+
+    &__position {
+      font-size: rem(20);
+    }
+
+    &__socials {
+      display: flex;
+      gap: rem(17);
+
+      & span {
+        &::before {
+          display: block;
+        }
+      }
+    }
   }
 }
 

@@ -14,7 +14,6 @@
   &__about-block {
     @include adaptiveValue("padding-top", 100, 50);
     @include adaptiveValue("padding-bottom", 100, 50);
-    background-color: $whiteColor;
   }
 
   &__categories-block {
@@ -193,6 +192,7 @@
 }
 
 .about-block {
+  background-color: #F9F8F8;
   &__container {
     display: flex;
     justify-content: center;
@@ -385,12 +385,12 @@
     width: 100%;
     max-width: rem(780);
     margin: rem(60) auto 0 auto;
-    @include adaptiveValue("margin-bottom", 100, 50);
 
     text-align: center;
   }
 
   .comment {
+    display: none;
     &__user-photo {
     }
 
@@ -418,24 +418,39 @@
 
     &__navigation {
       margin-top: rem(20);
+      text-align: center;
+    }
 
-      & span {
-        display: inline-block;
-        width: rem(8);
-        height: rem(8);
+    &__dot {
+      display: inline-block;
+      width: rem(8);
+      height: rem(8);
+      @include adaptiveValue("margin-bottom", 100, 50);
 
-        background-color: $grayColor;
-        border-radius: 50%;
+      background-color: $grayColor;
+      border-radius: 50%;
 
-        &:not(:last-child) {
-          margin-right: rem(6);
-        }
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-right: rem(6);
+      }
+
+      &.active,
+      &:hover {
+        background-color: $greenColor;
       }
     }
 
-    &__navigation .active {
-      background-color: $greenColor;
+    /*.scroll {
+      animation-name: fade;
+      animation-duration: 1.5s;
     }
+
+    @keyframes scroll {
+      from {opacity: .4}
+      to {opacity: 1}
+    }*/
   }
 
   &__counters {
