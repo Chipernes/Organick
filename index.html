@@ -5,7 +5,7 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.min.css?_v=20230625202607">
+  <link rel="stylesheet" href="css/style.min.css?_v=20230627160041">
   <link rel="shortcut icon" href="favicon.ico">
   <title>Organick</title>
 </head>
@@ -30,7 +30,7 @@
       <header class="header">
   <div class="header__menu menu">
     <nav class="menu__body">
-      <button class="menu__logo _icon-logo" type="button">Organick</button>
+      <a href="index.html"><button class="menu__logo _icon-logo" type="button">Organick</button></a>
       <ul class="menu__list">
         <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
         <li class="menu__item"><a class="menu__link" href="about.html">About</a></li>
@@ -211,13 +211,30 @@
               <p class="block-heading__subtitle">Testimonial</p>
               <h2 class="block-heading__title">What Our Customer Saying?</h2>
             </div>
-            <div class="testimonial-block__comment comment">
+            <div class="testimonial-block__comment comment scroll">
               <picture><source srcset="img/home/testimonial-block/user.webp" type="image/webp"><img class="comment__user-photo" src="img/home/testimonial-block/user.png" alt="User photo" ></picture>
               <p class="comment__text _icon-stars">Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
               <h6 class="comment__user-name">Sara Taylor</h6>
-              <p class="comment__user-role">Consumer</p>
-              <div class="comment__navigation"><span></span><span class="active"></span><span></span></div>
+              <p class="comment__user-role">Consumer111</p>
             </div>
+            <div class="testimonial-block__comment comment scroll">
+              <picture><source srcset="img/home/testimonial-block/user.webp" type="image/webp"><img class="comment__user-photo" src="img/home/testimonial-block/user.png" alt="User photo" ></picture>
+              <p class="comment__text _icon-stars">Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
+              <h6 class="comment__user-name">Sara Taylor</h6>
+              <p class="comment__user-role">Consumer222</p>
+            </div>
+            <div class="testimonial-block__comment comment scroll">
+              <picture><source srcset="img/home/testimonial-block/user.webp" type="image/webp"><img class="comment__user-photo" src="img/home/testimonial-block/user.png" alt="User photo" ></picture>
+              <p class="comment__text _icon-stars">Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
+              <h6 class="comment__user-name">Sara Taylor</h6>
+              <p class="comment__user-role">Consumer333</p>
+            </div>
+            <div class="comment__navigation">
+              <span class="comment__dot" onclick="currentSlide(1)"></span>
+              <span class="comment__dot" onclick="currentSlide(2)"></span>
+              <span class="comment__dot" onclick="currentSlide(3)"></span>
+            </div>
+            <!--<div class="comment__navigation"><span></span><span class="active"></span><span></span></div>-->
             <!-- New comments must be added -->
             <div class="testimonial-block__counters">
               <div class="counter">
@@ -421,6 +438,6 @@
   </div>
 </footer>
     </div>
-    <script src="js/app.min.js?_v=20230625202607"></script>
+    <script src="js/app.min.js?_v=20230627160041"></script>
   </body>
 </html>
