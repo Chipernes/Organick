@@ -649,6 +649,16 @@ h6 {
   }
 }
 
+@supports (margin-top: clamp( 3.125rem , calc(1.5033783784rem + 8.1081081081vw) , 8.75rem )) {
+  .footer {
+    margin-top: clamp( 3.125rem , calc(1.5033783784rem + 8.1081081081vw) , 8.75rem );
+  }
+}
+@supports not (margin-top: clamp( 3.125rem , calc(1.5033783784rem + 8.1081081081vw) , 8.75rem )) {
+  .footer {
+    margin-top: calc(3.125rem + 5.625 * (100vw - 20rem) / 69.375);
+  }
+}
 .footer__form {
   position: relative;
   width: 100%;
@@ -859,6 +869,7 @@ h6 {
 .footer__copyright {
   padding: 1.0625rem 0.9375rem 1.25rem 0.9375rem;
   text-align: center;
+  line-height: 165%;
   border-top: 1px solid #D4D4D4;
 }
 @supports (font-size: clamp( 0.875rem , calc(0.8029279279rem + 0.3603603604vw) , 1.125rem )) {
@@ -871,7 +882,7 @@ h6 {
     font-size: calc(0.875rem + 0.25 * (100vw - 20rem) / 69.375);
   }
 }
-.footer__copyright span {
+.footer__copyright span, .footer__copyright a {
   font-weight: 700;
 }
 
@@ -995,6 +1006,9 @@ h6 {
     padding-bottom: calc(3.125rem + 3.625 * (100vw - 20rem) / 69.375);
   }
 }
+.page__gallery-block {
+  background-color: #EFF6F1;
+}
 @supports (padding-top: clamp( 3.125rem , calc(0.6565315315rem + 12.3423423423vw) , 11.6875rem )) {
   .page__gallery-block {
     padding-top: clamp( 3.125rem , calc(0.6565315315rem + 12.3423423423vw) , 11.6875rem );
@@ -1025,14 +1039,14 @@ h6 {
     padding-top: calc(1.875rem + 9.1875 * (100vw - 20rem) / 69.375);
   }
 }
-@supports (padding-bottom: clamp( 3.125rem , calc(0.6925675676rem + 12.1621621622vw) , 11.5625rem )) {
+@supports (padding-bottom: clamp( 1.875rem , calc(1.5146396396rem + 1.8018018018vw) , 3.125rem )) {
   .page__blog-block {
-    padding-bottom: clamp( 3.125rem , calc(0.6925675676rem + 12.1621621622vw) , 11.5625rem );
+    padding-bottom: clamp( 1.875rem , calc(1.5146396396rem + 1.8018018018vw) , 3.125rem );
   }
 }
-@supports not (padding-bottom: clamp( 3.125rem , calc(0.6925675676rem + 12.1621621622vw) , 11.5625rem )) {
+@supports not (padding-bottom: clamp( 1.875rem , calc(1.5146396396rem + 1.8018018018vw) , 3.125rem )) {
   .page__blog-block {
-    padding-bottom: calc(3.125rem + 8.4375 * (100vw - 20rem) / 69.375);
+    padding-bottom: calc(1.875rem + 1.25 * (100vw - 20rem) / 69.375);
   }
 }
 
@@ -1570,7 +1584,6 @@ h6 {
 }
 .gallery-block__image {
   position: relative;
-  z-index: -1;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1839,6 +1852,9 @@ h6 {
   .page__team {
     padding-bottom: calc(3.125rem + 9.5 * (100vw - 20rem) / 69.375);
   }
+}
+.page__about-offers {
+  background-color: #274C5B;
 }
 @supports (padding-top: clamp( 3.125rem , calc(0.6385135135rem + 12.4324324324vw) , 11.75rem )) {
   .page__about-offers {
@@ -2138,6 +2154,74 @@ h6 {
 }
 .team-block .team-member__socials span::before {
   display: block;
+}
+
+.about-offers .block-heading {
+  text-align: center;
+}
+.about-offers .block-heading__title {
+  color: #F9F8F8;
+}
+@media (max-width: 33.125rem) {
+  .about-offers .block-heading__title {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 33.125rem) {
+  .about-offers .block-heading__title {
+    font-size: 2.5rem;
+  }
+}
+.about-offers__content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2.0625rem;
+}
+@supports (column-gap: clamp( 0.8125rem , calc(2.1813063063rem + -1.5315315315vw) , 1.875rem )) {
+  .about-offers__content {
+    column-gap: clamp( 0.8125rem , calc(2.1813063063rem + -1.5315315315vw) , 1.875rem );
+  }
+}
+@supports not (column-gap: clamp( 0.8125rem , calc(2.1813063063rem + -1.5315315315vw) , 1.875rem )) {
+  .about-offers__content {
+    column-gap: calc(1.875rem + -1.0625 * (100vw - 20rem) / 69.375);
+  }
+}
+@supports (row-gap: clamp( 1.875rem , calc(1.5146396396rem + 1.8018018018vw) , 3.125rem )) {
+  .about-offers__content {
+    row-gap: clamp( 1.875rem , calc(1.5146396396rem + 1.8018018018vw) , 3.125rem );
+  }
+}
+@supports not (row-gap: clamp( 1.875rem , calc(1.5146396396rem + 1.8018018018vw) , 3.125rem )) {
+  .about-offers__content {
+    row-gap: calc(1.875rem + 1.25 * (100vw - 20rem) / 69.375);
+  }
+}
+.about-offers__item {
+  width: 20.875rem;
+  text-align: center;
+  transition: 0.3s;
+}
+.about-offers__item:hover {
+  transform: translateY(-1.25rem);
+}
+.about-offers__item:hover img {
+  transform: scale(1.01);
+}
+.about-offers__image {
+  width: 100%;
+  border-radius: 1.875rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  transition: 0.3s;
+}
+.about-offers__name {
+  margin-top: 1.5rem;
+  font-size: 1.5625rem;
+  font-family: "Roboto", serif;
+  font-weight: 500;
+  color: #F9F8F8;
 }
 
 .page {

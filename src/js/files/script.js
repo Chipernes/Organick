@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+/* Sticky header */
 const header = document.querySelector('header');
 const headerTop = header.offsetHeight;
 
@@ -30,10 +32,8 @@ window.addEventListener('scroll', () => {
 });
 
 
-
-
 /* Slide of testimonial comments */
-let slideIndex = 1;
+let slideIndex = 2;
 showSlides(slideIndex);
 
 function showSlides(n) {

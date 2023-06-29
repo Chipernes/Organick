@@ -1,5 +1,7 @@
 //====================================================================================================
 .footer {
+  @include adaptiveValue("margin-top", 140, 50);
+
   &__container {
 
   }
@@ -248,10 +250,12 @@
 
     @include adaptiveValue("font-size", 18, 14);
     text-align: center;
+    line-height: 165%;
 
     border-top: 1px solid #D4D4D4;
 
-    & span {
+    & span,
+    & a {
       font-weight: 700;
     }
   }

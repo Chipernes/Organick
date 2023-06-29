@@ -39,11 +39,13 @@
   &__gallery-block {
     @include adaptiveValue("padding-top", 187, 50);
     @include adaptiveValue("padding-bottom", 187, 50);
+
+    background-color: $lightGreenColor;
   }
 
   &__blog-block {
     @include adaptiveValue("padding-top", 177, 30);
-    @include adaptiveValue("padding-bottom", 185, 50);
+    @include adaptiveValue("padding-bottom", 50, 30);
   }
 }
 
@@ -700,7 +702,6 @@
 
   &__image {
     position: relative;
-    z-index: -1;
 
     width: 100%;
     height: 100%;
