@@ -16,11 +16,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+const header = document.querySelector('header');
+const headerTop = header.offsetHeight;
+
+window.addEventListener('scroll', () => {
+    const scrollPos = window.scrollY;
+
+    if (scrollPos > headerTop) {
+        header.classList.add('fixed_menu');
+    } else {
+        header.classList.remove('fixed_menu');
+    }
+});
+
 
 
 
 /* Slide of testimonial comments */
-/*let slideIndex = 1;
+let slideIndex = 1;
 showSlides(slideIndex);
 
 function showSlides(n) {
@@ -41,7 +54,7 @@ function showSlides(n) {
 
 function currentSlide(n) {
     showSlides(slideIndex = n);
-}*/
+}
 
 /*function showSlides() {
     let i;
