@@ -274,6 +274,14 @@ h6 {
   background-color: #F9F8F8;
   border: 3px solid #274C5B;
   border-radius: 1.875rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.product-item:hover {
+  -webkit-transform: translateY(-0.9375rem);
+      -ms-transform: translateY(-0.9375rem);
+          transform: translateY(-0.9375rem);
 }
 
 .product-item__type {
