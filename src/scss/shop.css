@@ -1,0 +1,8 @@
+.categories-block__content {
+  display: flex;
+  justify-content: center;
+  gap: rem(20);
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=shop.css.map */

@@ -84,6 +84,12 @@
   border: 3px solid $mainColor;
   border-radius: rem(30);
 
+  transition: 0.3s;
+
+  &:hover {
+    transform: translateY(rem(-15));
+  }
+
   &__type {
     display: inline-block;
     margin: rem(30);
