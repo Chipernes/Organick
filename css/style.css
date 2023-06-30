@@ -343,6 +343,42 @@ h6 {
   color: #B8B8B8;
 }
 
+.main-heading {
+  position: relative;
+}
+
+@supports (height: clamp(18.75rem, calc(16.0472972973rem + 13.5135135135vw), 28.125rem)) {
+  .main-heading {
+    height: clamp(18.75rem, calc(16.0472972973rem + 13.5135135135vw), 28.125rem);
+  }
+}
+
+@supports not (height: clamp(18.75rem, calc(16.0472972973rem + 13.5135135135vw), 28.125rem)) {
+  .main-heading {
+    height: calc(18.75rem + 9.375 * (100vw - 20rem) / 69.375);
+  }
+}
+
+.main-heading__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main-heading__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  white-space: nowrap;
+  font-size: 4.375rem;
+  font-family: "Roboto", serif;
+  font-weight: 800;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -1887,42 +1923,6 @@ h6 {
   }
 }
 
-.main-heading {
-  position: relative;
-}
-
-@supports (height: clamp(18.75rem, calc(16.0472972973rem + 13.5135135135vw), 28.125rem)) {
-  .main-heading {
-    height: clamp(18.75rem, calc(16.0472972973rem + 13.5135135135vw), 28.125rem);
-  }
-}
-
-@supports not (height: clamp(18.75rem, calc(16.0472972973rem + 13.5135135135vw), 28.125rem)) {
-  .main-heading {
-    height: calc(18.75rem + 9.375 * (100vw - 20rem) / 69.375);
-  }
-}
-
-.main-heading__image {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.main-heading__title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  white-space: nowrap;
-  font-size: 4.375rem;
-  font-family: "Roboto", serif;
-  font-weight: 800;
-}
-
 .page__about .about-block {
   background-color: #ffffff;
 }
@@ -2296,6 +2296,17 @@ h6 {
   font-family: "Roboto", serif;
   font-weight: 500;
   color: #F9F8F8;
+}
+
+.categories-block__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 0;
 }
 
 .page {
