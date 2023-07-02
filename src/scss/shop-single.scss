@@ -1,3 +1,100 @@
 //====================================================================================================
+.page {
+  &__shop-single {
+  }
 
+  &__main-heading {
+  }
+
+  &__product-info {
+    @include adaptiveValue("margin-top", 130, 50);
+    @include adaptiveValue("margin-bottom", 90, 50);
+  }
+
+  &__general-info {
+  }
+
+  &__categories-block {
+  }
+}
+
+.product-info {
+  &__container {
+  }
+
+  .product-description {
+    &__photo {
+    }
+
+    &__type {
+    }
+
+    &__image {
+    }
+
+    &__details {
+    }
+
+    &__title {
+    }
+
+    &__price {
+    }
+
+    &__discount {
+    }
+
+    &__text {
+    }
+
+    &__quantity {
+    }
+
+    .button {
+    }
+  }
+}
+
+.general-info {
+  &__selection {
+  }
+
+  .button {
+  }
+
+  &__text {
+  }
+}
+
+.categories-block {
+  &__container {
+  }
+
+  .block-heading {
+    &__title {
+    }
+  }
+
+  &__content {
+    .product-item {
+      &__type {
+      }
+
+      &__image {
+      }
+
+      &__info {
+      }
+
+      &__title {
+      }
+
+      &__price {
+      }
+
+      &__discount {
+      }
+    }
+  }
+}
 //====================================================================================================
