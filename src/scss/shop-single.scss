@@ -72,6 +72,17 @@
 
   .block-heading {
     &__title {
+      @media (max-width: rem(420)) {
+        & {
+          font-size: $h3-heading;
+        }
+      }
+
+      @media (max-width: rem(345)) {
+        & {
+          font-size: $h4-heading;
+        }
+      }
     }
   }
 

@@ -182,6 +182,10 @@
     display: inline-flex;
     align-items: center;
 
+    @media (max-width: rem(1000)) {
+      padding: rem(10) 0;
+    }
+
     @media (min-width: rem(1000)) {
       padding: rem(20) 0;
     }
@@ -209,7 +213,7 @@
       }
 
       @media (max-width: rem(1000)) {
-        top: rem(10);
+        top: rem(20);
         left: rem(65);
       }
 
