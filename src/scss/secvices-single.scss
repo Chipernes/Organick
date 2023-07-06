@@ -1,0 +1,192 @@
+//====================================================================================================
+.page {
+  &__service-single {
+  }
+
+  &__main-heading {
+  }
+
+  &__quality-standard {
+    @include adaptiveValue("margin-top", 184, 50);
+  }
+}
+
+.quality-standard {
+  &__container {
+  }
+
+  &__image {
+    width: 100%;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    max-width: rem(935);
+    margin: 0 auto;
+    @include adaptiveValue("margin-top", 80, 50);
+  }
+
+  .block-heading {
+    &__title {
+      @media (max-width: rem(550)) {
+        & {
+          font-size: $h3-heading;
+        }
+      }
+
+      @media (max-width: rem(450)) {
+        & {
+          font-size: $h4-heading;
+        }
+      }
+    }
+
+    &__text {
+      margin-top: rem(30);
+    }
+  }
+
+  &__benefits {
+    @include adaptiveValue("margin-top", 70, 50);
+    @include adaptiveValue("margin-bottom", 70, 50);
+  }
+
+  &__advantage {
+    display: flex;
+    justify-content: center;
+    gap: rem(20);
+
+    &:not(:first-child) {
+      margin-top: rem(30);
+    }
+
+    @media (max-width: rem(800)) {
+      & {
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    max-width: rem(380);
+    overflow: hidden;
+
+    border-radius: rem(20);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @media (max-width: rem(600)) {
+      & {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__description {
+    @include adaptiveValue("padding-top", 62, 20);
+    @include adaptiveValue("padding-bottom", 62, 20);
+    @include adaptiveValue("padding-left", 45, 15);
+    @include adaptiveValue("padding-right", 45, 15);
+
+    background-color: $whiteColor;
+    border-radius: rem(20);
+  }
+
+  &__title {
+    margin-bottom: rem(8);
+
+    font-size: $h6-heading;
+    font-family: $robotoFamily;
+    font-weight: 500;
+  }
+
+  &__text {
+    line-height: 165%;
+  }
+
+  &__politics {
+    .block-heading {
+      &__title {
+      }
+
+      &__text {
+      }
+    }
+  }
+
+  &__support {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: rem(30);
+    margin-top: rem(75);
+  }
+
+  &__point {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(25);
+    padding: rem(15) rem(54) rem(15) rem(18);
+
+    font-size: $h6-heading;
+    font-family: $robotoFamily;
+    font-weight: 600;
+
+    background-color: $whiteColor;
+    border-radius: rem(100);
+
+    &::before {
+      content: "00";
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: rem(70);
+      height: rem(70);
+
+      font-weight: 700;
+      color: #ffffff;
+
+      background-color: $greenColor;
+      border-radius: 50%;
+    }
+
+    &:first-child::before {
+      content: "01";
+    }
+
+    &:last-child::before {
+      content: "02";
+    }
+
+    @media (max-width: rem(876)) {
+      & {
+        width: 100%;
+        justify-content: start;
+      }
+    }
+
+    @media (max-width: rem(500)) {
+      & {
+        justify-content: center;
+        flex-direction: column;
+        padding: rem(15);
+
+        border-radius: rem(20);
+      }
+    }
+  }
+}
+//====================================================================================================
